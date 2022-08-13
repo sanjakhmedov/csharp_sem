@@ -1,7 +1,7 @@
 ﻿Console.Write("Enter coordinate for X: ");
-int x = Convert.ToInt32(ReadLine());
+int x = Convert.ToInt32(Console.ReadLine());
 Console.Write("Enter coordinate for Y: ");
-int y = Convert.ToInt32(ReadLine());
+int y = Convert.ToInt32(Console.ReadLine());
 
 int XY(int x1, int y1)
 {
@@ -16,10 +16,14 @@ int XY(int x1, int y1)
     {
         return 3;
     }
-    else // if (x1 > 0 && y1 < 0) 
+    else if (x1 > 0 && y1 < 0) 
     {
         return 4;
+    } 
+    else
+    {
+        return 0;
     }
 }
 
-XY(x, y);
+Console.WriteLine(XY(x, y));
