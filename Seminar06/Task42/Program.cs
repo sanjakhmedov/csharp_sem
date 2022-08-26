@@ -5,20 +5,31 @@
 // 2 -> 10
 // 13 -> 1101
 
-Console.Write("Enter the number: ");
-int number = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Enter the number: ");
+// int number = Convert.ToInt32(Console.ReadLine());
 
-int DecimalToBinary(int num)
+// int DecimalToBinary(int num)
+// {
+//     int res = 0;
+//     int mult = 1;
+//     while (num > 0)
+//     {
+//         res += num % 2 * mult;
+//         num /= 2;
+//         mult *= 10;
+//     }
+//     return res;
+// }
+// int result = DecimalToBinary(number);
+// Console.WriteLine(result);
+
+int num = 13;
+
+void DecToBin (int n)
 {
-    int res = 0;
-    int mult = 1;
-    while (num > 0)
-    {
-        res += num % 2 * mult;
-        num /= 2;
-        mult *= 10;
-    }
-    return res;
+    if (n == 0) return;
+    DecToBin(n / 2);
+    Console.Write(n % 2);
 }
-int result = DecimalToBinary(number);
-Console.WriteLine(result);
+
+DecToBin(num);
