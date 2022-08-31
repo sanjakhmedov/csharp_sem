@@ -41,8 +41,20 @@ int MatrDiagonalSum(int[,] matr)
     return sumOfDiagonal;
 }
 
+int MatrDiagonalSumAlt(int[,] matr)
+{
+    int sumOfDiagonal = 0;
+    int size = matr.GetLength(0);
+    if (size > matr.GetLength(1)) size = matr.GetLength(1);
+    for (int i = 0; i < size; i++)
+    {
+        sumOfDiagonal += matr[i,i];
+    }
+    return sumOfDiagonal;
+}
+
 int[,] matrix = CreateMatrixRndInt(5, 6, 1, 9);
 PrintMatrix(matrix);
-int matrDiagonalSum = MatrDiagonalSum(matrix);
+int matrDiagonalSum = MatrDiagonalSumAlt(matrix);
 Console.WriteLine("Matrix diagonal sum equals " + matrDiagonalSum);
 
