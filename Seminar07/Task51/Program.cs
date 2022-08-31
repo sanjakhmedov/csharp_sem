@@ -34,14 +34,14 @@ void PrintMatrix(int[,] matrix)
 int MatrDiagonalSum(int[,] matr)
 {
     int sumOfDiagonal = 0;
-    for (int i = 0; i < matr.GetLength(0) || i < matr.GetLength(1); i++)
+    for (int i = 0; i < matr.GetLength(0) && i < matr.GetLength(1); i++)
     {
         sumOfDiagonal += matr[i,i];
     }
     return sumOfDiagonal;
 }
 
-int[,] matrix = CreateMatrixRndInt(5, 5, 1, 9);
+int[,] matrix = CreateMatrixRndInt(5, 6, 1, 9);
 PrintMatrix(matrix);
 int matrDiagonalSum = MatrDiagonalSum(matrix);
 Console.WriteLine("Matrix diagonal sum equals " + matrDiagonalSum);
