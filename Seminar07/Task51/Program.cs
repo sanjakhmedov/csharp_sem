@@ -34,12 +34,9 @@ void PrintMatrix(int[,] matrix)
 int MatrDiagonalSum(int[,] matr)
 {
     int sumOfDiagonal = 0;
-    for (int i = 0; i < matr.GetLength(0); i++)
+    for (int i = 0; i < matr.GetLength(0) || i < matr.GetLength(1); i++)
     {
-        for (int j = 0; j < matr.GetLength(1); j++)
-        {
-            if (i == j) sumOfDiagonal += matr[i, j];
-        }
+        sumOfDiagonal += matr[i,i];
     }
     return sumOfDiagonal;
 }
