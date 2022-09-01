@@ -31,15 +31,15 @@ void PrintMatrix(int[,] matrix)
     Console.WriteLine();
 }
 
-int MatrDiagonalSum(int[,] matr)
-{
-    int sumOfDiagonal = 0;
-    for (int i = 0; i < matr.GetLength(0) && i < matr.GetLength(1); i++)
-    {
-        sumOfDiagonal += matr[i,i];
-    }
-    return sumOfDiagonal;
-}
+// int MatrDiagonalSum(int[,] matr)
+// {
+//     int sumOfDiagonal = 0;
+//     for (int i = 0; i < matr.GetLength(0) && i < matr.GetLength(1); i++)
+//     {
+//         sumOfDiagonal += matr[i,i];
+//     }
+//     return sumOfDiagonal;
+// }
 
 int MatrDiagonalSumAlt(int[,] matr)
 {
